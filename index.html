@@ -1,0 +1,95 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Righteous&amp;display=swap" rel="stylesheet"> 
+<title>Login</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-new-gr-c-s-check-loaded="14.1176.0" data-gr-ext-installed="" cz-shortcut-listen="true">
+  <div class="container d-flex justify-content-center flex-column mt-5 w-50 ">
+   <h2 class="text-center">Smart Login System</h2>
+<div class="forms">
+ <input id="name" type="text" placeholder="Enter your name" class="form-control w-75 mt-3 text-white mx-auto d-none">
+
+ <div id="error" class=" d-none alert alert-danger">name Must start with capital letter and between 3-8 letters</div>
+
+
+ <input id="email" type="email" placeholder="Enter your email" class="form-control w-75 mt-3 text-white mx-auto">
+
+ <div id="error1" class=" d-none alert alert-danger">please enter a valid gmail</div>
+
+ <div id="error3" class="d-none alert alert-danger">gmail exists</div>
+
+
+
+ <input id="pass" type="password" placeholder="Enter your password" class="form-control w-75 mt-3 text-white mx-auto">
+
+ <div id="error2" class=" d-none alert alert-danger">5 characters at least, must contain special character like /@#..etc</div>
+
+ <div id="error4" class="d-none alert alert-danger">wrong gmail or password</div>
+
+
+</div>
+<div id="btn" class="btn w-75 mx-auto border border-1 mt-4 "> login</div>
+<div id="btn2" class="btn w-75 mx-auto border border-1 mt-4 d-none "> Sign Up</div>
+<p class="mx-auto mt-2 text-white"> Dont have an account? <a id="up" href="#" class="link-light text-decoration-none ">Sign up</a>
+<a id="in" href="#" class="link-light text-decoration-none d-none">Sign in</a></p>
+<p id="sucess" class="text-primary text-center d-none">Sucess</p>
+  </div>
+
+
+   
+   <script src="script/main.js"></script>
+   <script src="js/bootstrap.bundle.min.js"></script>
+ <!-- Code injected by live-server -->
+<script>
+ // <![CDATA[  <-- For SVG support
+ if ('WebSocket' in window) {
+   (function () {
+     function refreshCSS() {
+       var sheets = [].slice.call(document.getElementsByTagName("link"));
+       var head = document.getElementsByTagName("head")[0];
+       for (var i = 0; i < sheets.length; ++i) {
+         var elem = sheets[i];
+         var parent = elem.parentElement || head;
+         parent.removeChild(elem);
+         var rel = elem.rel;
+         if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+           var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+           elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+         }
+         parent.appendChild(elem);
+       }
+     }
+     var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+     var address = protocol + window.location.host + window.location.pathname + '/ws';
+     var socket = new WebSocket(address);
+     socket.onmessage = function (msg) {
+       if (msg.data == 'reload') window.location.reload();
+       else if (msg.data == 'refreshcss') refreshCSS();
+     };
+     if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+       console.log('Live reload enabled.');
+       sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+     }
+   })();
+ }
+ else {
+   console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+ }
+ // ]]>
+</script>
+</body>
