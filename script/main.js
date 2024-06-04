@@ -28,7 +28,8 @@ up.classList.add("d-none");
 names.classList.remove("d-none");
 btntwo.classList.remove("d-none");
 btn.classList.add("d-none")
-
+errorlog.classList.replace("d-block","d-none")
+clear()
 });
 inn.addEventListener('click', function () {
   returns();
@@ -45,6 +46,11 @@ error.classList.replace("d-block", "d-none")
 gmailError.classList.replace("d-block", "d-none")
 passError.classList.replace("d-block", "d-none")
 truee.classList.replace("d-block","d-none")
+error.classList.replace("d-block", "d-none")
+passError.classList.replace("d-block", "d-none")
+gmailError.classList.replace("d-block", "d-none")
+gmailErrortwo.classList.replace("d-block", "d-none");
+clear()
 
 }
 
@@ -69,10 +75,20 @@ btntwo.addEventListener('click', function () {
 
 btn.addEventListener('click', function () {
   if(check()){
-    document.querySelector("#last").innerText = names.value;
-
+display()
   }
 })
+
+function display() {
+  let cartona =""
+  for (let i = 0; i < container.length; i++) {
+    cartona+=`
+<h2> ${container[i].Name} </h2>
+
+    `
+  }
+  document.getElementById('last').innerHTML=cartona
+}
 
 
 
